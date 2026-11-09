@@ -1,0 +1,151 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+/* Markdown Preview Enhanced: VS Code preview palette. */
+@media screen {
+  body:has(.markdown-preview[data-for="preview"]) {
+    background-color: #161616;
+    color-scheme: dark;
+  }
+
+  .markdown-preview.markdown-preview[data-for="preview"] {
+    background-color: #161616;
+    color: #f7f1ff;
+  }
+
+  .markdown-preview[data-for="preview"] :is(h1, h2, h3, h4, h5, h6, strong, dt, th):not(.mermaid *) {
+    color: #ffffff;
+  }
+
+  .markdown-preview[data-for="preview"] a {
+    color: #88bfff;
+  }
+
+  .markdown-preview[data-for="preview"] :is(del, h6) {
+    color: #a6a6a6;
+  }
+
+  .markdown-preview[data-for="preview"] blockquote {
+    color: #d9d9d9;
+    background-color: #202020;
+    border-left-color: #494949;
+  }
+
+  .markdown-preview[data-for="preview"] hr {
+    background-color: #383838;
+  }
+
+  .markdown-preview[data-for="preview"] :is(td, th) {
+    border-color: #383838;
+  }
+
+  .markdown-preview[data-for="preview"] :is(code, pre, kbd):not(.mermaid *) {
+    color: #f7f1ff;
+  }
+
+  .markdown-preview[data-for="preview"] pre {
+    background-color: #202020;
+  }
+
+  .markdown-preview[data-for="preview"] pre code {
+    background-color: transparent;
+  }
+
+  .markdown-preview[data-for="preview"] kbd {
+    background-color: #252525;
+    border-color: #494949;
+  }
+
+  .markdown-preview[data-for="preview"] :is(.token.comment, .token.prolog, .token.doctype, .token.cdata) {
+    color: #8b949e;
+  }
+
+  .markdown-preview[data-for="preview"] .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .markdown-preview[data-for="preview"] :is(.token.property, .token.tag, .token.constant, .token.symbol, .token.deleted, .token.atrule, .token.keyword) {
+    color: #ff7b72;
+  }
+
+  .markdown-preview[data-for="preview"] :is(.token.boolean, .token.number, .token.operator) {
+    color: #79c0ff;
+  }
+
+  .markdown-preview[data-for="preview"] :is(.token.selector, .token.attr-name, .token.builtin, .token.inserted) {
+    color: #7ee787;
+  }
+
+  .markdown-preview[data-for="preview"] :is(.token.string, .token.char, .token.attr-value, .token.url) {
+    color: #a5d6ff;
+  }
+
+  .markdown-preview[data-for="preview"] :is(.token.function, .token.class-name) {
+    color: #d2a8ff;
+  }
+
+  .markdown-preview[data-for="preview"] :is(.token.regex, .token.important) {
+    color: #ffa657;
+  }
+
+  .markdown-preview[data-for="preview"] .mermaid svg {
+    background-color: transparent !important;
+  }
+
+  .markdown-preview[data-for="preview"] .mermaid :is(text, tspan) {
+    fill: #f7f1ff !important;
+    color: #f7f1ff !important;
+  }
+
+  .markdown-preview[data-for="preview"] .mermaid foreignObject :is(div, span, p) {
+    color: #f7f1ff !important;
+    background-color: transparent !important;
+  }
+
+  .markdown-preview[data-for="preview"] .mermaid .node :is(rect, polygon, circle, ellipse, path) {
+    fill: #252730 !important;
+    stroke: #81879a !important;
+    filter: none !important;
+  }
+
+  .markdown-preview[data-for="preview"] .mermaid .node :is(rect, polygon, circle, ellipse, path)[style*="fill:"] {
+    fill-opacity: 0.18 !important;
+  }
+
+  .markdown-preview[data-for="preview"] .mermaid .cluster rect {
+    fill: #1e2026 !important;
+    stroke: #5d6370 !important;
+  }
+
+  .markdown-preview[data-for="preview"] .mermaid :is(rect.actor, .labelBox, .activation0, .activation1, .activation2) {
+    fill: #252730 !important;
+    stroke: #81879a !important;
+    filter: none !important;
+  }
+
+  .markdown-preview[data-for="preview"] .mermaid .note {
+    fill: #302b1e !important;
+    stroke: #a18d55 !important;
+    filter: none !important;
+  }
+
+  .markdown-preview[data-for="preview"] .mermaid :is(.flowchart-link, .edgePath .path, .messageLine0, .messageLine1, .loopLine, .separator, .divider) {
+    stroke: #b8bcc8 !important;
+  }
+
+  .markdown-preview[data-for="preview"] .mermaid .actor-line {
+    stroke: #767d8e !important;
+  }
+
+  .markdown-preview[data-for="preview"] .mermaid marker :is(path, polygon, circle) {
+    fill: #c7cbd4 !important;
+    stroke: #c7cbd4 !important;
+  }
+
+  .markdown-preview[data-for="preview"] .mermaid :is(.edgeLabel, .edgeLabel p, .edgeLabel span) {
+    color: #f7f1ff !important;
+    background-color: #161616 !important;
+  }
+
+  .markdown-preview[data-for="preview"] .mermaid .labelBkg {
+    fill: #161616 !important;
+  }
+}

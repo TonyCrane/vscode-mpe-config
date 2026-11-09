@@ -1,0 +1,65 @@
+/*!
+ * SPDX-License-Identifier: AGPL-3.0-only
+ * License: https://www.gnu.org/licenses/agpl-3.0.html
+ */
+
+// 全角括号字形：思源宋体，分别匹配常规与粗体
+@font-face {
+  font-family: "MPE CJK Brackets";
+  src: local("Source Han Serif SC"), local("SourceHanSerifSC-Regular");
+  font-style: normal;
+  font-weight: 400;
+  unicode-range: U+3008-3011, U+3014-3015, U+FF08-FF09, U+FF3B, U+FF3D, U+FF5B, U+FF5D;
+}
+
+@font-face {
+  font-family: "MPE CJK Brackets";
+  src: local("Source Han Serif SC Bold"), local("SourceHanSerifSC-Bold");
+  font-style: normal;
+  font-weight: 700;
+  unicode-range: U+3008-3011, U+3014-3015, U+FF08-FF09, U+FF3B, U+FF3D, U+FF5B, U+FF5D;
+}
+
+
+// 正文字体与渲染
+.markdown-preview.markdown-preview {
+  font-family: "Iowan Old Style", "MPE CJK Brackets", "FZYaSong-R-GBK";
+  text-rendering: optimizeLegibility;
+  color: #000;
+}
+
+// 代码字体
+.markdown-preview code,
+.markdown-preview pre {
+  font-family: "SF Mono", "JetBrains Mono", Consolas, "Microsoft YaHei UI",
+    "Liberation Mono", Menlo, Courier, monospace;
+  page-break-inside: auto;
+}
+
+// Mermaid 继承正文的字体
+.markdown-preview .mermaid,
+.markdown-preview .mermaid svg,
+.markdown-preview .mermaid svg * {
+  font-family: inherit !important;
+}
+
+// 行内代码的背景、留白与字号
+html body code {
+  background-color: transparent;
+  padding: 0;
+  font-size: 0.9em;
+}
+
+html body code::after, html body code::before {
+  content: "";
+}
+
+// 打印时的代码换行
+@media print {
+  code[class*="language-"],
+  pre[class*="language-"],
+  pre[class*="language-"] > code {
+    white-space: pre-wrap;
+    page-break-before: avoid !important;
+  }
+}

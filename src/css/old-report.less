@@ -1,0 +1,327 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// 旧版三线表与报告排版归档
+
+.three-line > table {
+  border-top: 1.5pt solid;
+  border-bottom: 1.5pt solid;
+  font-size: 0.9em;
+  text-align: center;
+  page-break-inside: avoid;
+  display: inline-table !important;
+}
+
+.three-line > table > tbody > tr > td {
+  border: none;
+  padding: 7px;
+}
+.three-line > table > tbody > tr {
+  border: none;
+  padding: 7px;
+}
+
+.three-line > table > thead {
+  border-bottom: 0.75pt solid;
+  font-size: 0.9em;
+}
+
+.three-line > table th {
+  border: none;
+}
+
+.report-main {
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 1.8rem;
+  font-size: 1rem;
+  font-family: "JetBrains Mono", "Source Han Serif SC Medium";
+  text-spacing-trim: space-all;
+
+  p {
+    text-align: justify;
+    hyphens: auto;
+    margin-top: 1rem;
+  }
+
+  .label p {
+    text-align: center !important;
+    font-size: 1.25em;
+    font-weight: bold !important;
+  }
+
+  .img p {
+    text-align: center !important;
+  }
+
+  .img p img {
+    margin: auto;
+  }
+
+  .img.header p img {
+    max-width: 50%;
+    max-height: 30%;
+    margin-top: 4em;
+  }
+
+  .img.big p img {
+    max-width: 90%;
+    max-height: 30%;
+  }
+
+  .img.middle p img {
+    max-width: 80%;
+    max-height: 30%;
+  }
+
+  .img.small p img {
+    max-width: 70%;
+    max-height: 30%;
+  }
+
+  .content {
+    max-width: 21cm;
+  }
+
+  .grid {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    table {
+      display: inline-table !important;
+      width: auto
+    }
+
+    table * {
+      font-size: 1em;
+      border: none;
+      font-weight: normal !important;
+      text-align: center;
+      page-break-inside: avoid;
+    }
+  }
+
+  .three-line > table {
+    border-top: 1.5pt solid;
+    border-bottom: 1.5pt solid;
+    font-size: 0.9em;
+    text-align: center;
+    page-break-inside: avoid;
+    display: inline-table !important;
+  }
+
+  .three-line > table > tbody > tr > td {
+    border: none;
+    padding: 7px;
+  }
+  .three-line > table > tbody > tr {
+    border: none;
+    padding: 7px;
+  }
+
+  .three-line > table > thead {
+    border-bottom: 0.75pt solid;
+    font-size: 0.9em;
+  }
+
+  .three-line > table th {
+    border: none;
+  }
+
+  .content > table {
+    width: 100%;
+    border: 1.5pt solid;
+    font-size: 0.9em;
+    text-align: center;
+    page-break-inside: avoid;
+    display: inline-table !important;
+  }
+
+  .content > table > tbody > tr > td {
+    border: 0.75pt solid;
+    padding: 7px;
+  }
+
+  .content > table > tbody > tr {
+    border: 0.75pt solid;
+    padding: 7px;
+  }
+
+  .content > table > thead {
+    border: 0.75pt solid;
+    font-size: 0.9em;
+  }
+
+  .content > table th {
+    border: 0.75px solid;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid !important;
+    font-family: "JetBrains Mono", "Source Han Sans SC";
+  }
+
+  .content {
+    p {
+      text-align: left;
+      text-indent: 2em;
+    }
+
+    h1 {
+      padding-top: 5rem;
+      page-break-before: always;
+      text-align: center;
+      font-size: 2.5rem;
+      line-height: 3.25rem;
+      margin-bottom: 1.625rem;
+      counter-reset: h2;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      line-height: 2rem;
+      margin-top: 3rem;
+      counter-reset: h3;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      margin-top: 2.5rem;
+      counter-reset: h4;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+      margin-top: 2rem;
+      counter-reset: h5;
+    }
+
+    h5 {
+      font-size: 1rem;
+      margin-top: 1.8rem;
+    }
+
+    h6 {
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: normal;
+      margin-top: 2.5rem;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+      line-height: 1.625rem;
+    }
+
+    h1 + h2 {
+      margin-top: 1.625rem;
+    }
+
+    h2 + h3,
+    h3 + h4,
+    h4 + h5 {
+      margin-top: 0.8rem;
+    }
+
+    h5 + h6 {
+      margin-top: -0.8rem;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-bottom: 0.8rem;
+    }
+
+    h2:before {
+      counter-increment: h2;
+      content: counter(h2);
+      margin-right: 1rem;
+    }
+
+    h3:before,
+    h3.md-focus.md-heading:before {
+      counter-increment: h3;
+      content: counter(h2) "." counter(h3);
+      margin-right: 1rem;
+    }
+
+    h4:before,
+    h4.md-focus.md-heading:before {
+      counter-increment: h4;
+      content: counter(h2) "." counter(h3) "." counter(h4);
+      margin-right: 1rem;
+    }
+
+    h5:before,
+    h5.md-focus.md-heading:before {
+      counter-increment: h5;
+      content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5);
+      margin-right: 1rem;
+    }
+  }
+
+  #name {
+    p {
+      text-align: center;
+    }
+    text-align: center;
+    font-size: 1.3em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  #title {
+    p {
+      text-align: center;
+    }
+    font-family: "JetBrains Mono", "Source Han Sans CN";
+    margin-top: 1rem;
+    font-size: 2.4em;
+    line-height: 1.8em;
+  }
+
+  #subtitle {
+    p {
+      text-align: center;
+    }
+    margin-top: 2rem;
+    font-size: 2em;
+    margin-bottom: 12rem;
+  }
+
+  .conclusion p {
+    text-align: center !important;
+    font-weight: bold;
+    padding: 2px;
+    border: 1px solid;
+    margin: 0 2rem;
+  }
+
+  .cover {
+    page-break-after: always;
+    text-align: center;
+  }
+
+  .non-para p,
+  .non-paragraph p {
+    text-indent: 0;
+  }
+
+  li::marker {
+    font-weight: bold;
+  }
+
+  blockquote {
+    color: #000;
+  }
+}

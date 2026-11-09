@@ -1,0 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// 编号继承标题的全部文本样式；与原 counter.css 保持相同间距
+.markdown-preview :is(h2, h3, h4, h5, h6)[data-mpe-heading-number]::before {
+  content: attr(data-mpe-heading-number);
+  margin-right: 0.8rem;
+}
