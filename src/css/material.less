@@ -1,0 +1,97 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// MkDocs Material 语法的样式，配合 src/js/material.js
+.markdown-preview.markdown-preview {
+  details.admonition > summary.admonition-title {
+    position: relative;
+    padding-right: 2.5rem;
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: "›";
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      font-size: 1.4em;
+      line-height: 1;
+      transform: translateY(-50%);
+      transition: transform 0.15s;
+    }
+  }
+
+  details.admonition[open] > summary.admonition-title::after {
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+  .mpe-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em 0;
+
+    > input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    > label {
+      margin-bottom: -1px;
+      padding: 0.4em 1em;
+      border-bottom: 2px solid transparent;
+      color: color-mix(in srgb, currentColor 65%, transparent);
+      font-size: 0.9em;
+      cursor: pointer;
+    }
+
+    > input:checked + label {
+      border-bottom-color: currentColor;
+      color: inherit;
+      font-weight: 600;
+    }
+
+    > input:focus-visible + label {
+      outline: 1px solid currentColor;
+    }
+
+    > .mpe-tab-panel {
+      display: none;
+      order: 1;
+      width: 100%;
+      padding-top: 0.6em;
+      border-top: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+    }
+
+    > input:checked + label + .mpe-tab-panel {
+      display: block;
+    }
+  }
+
+  .twemoji {
+    display: inline-flex;
+    height: 1.2em;
+    vertical-align: text-top;
+
+    svg {
+      width: 1.2em;
+      height: 1.2em;
+      fill: currentColor;
+    }
+  }
+
+  .mpe-code-title {
+    margin-top: 1em;
+    padding: 0.4em 1em;
+    border-bottom: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+    background-color: color-mix(in srgb, currentColor 6%, transparent);
+    font-family: "SF Mono", "JetBrains Mono", Menlo, monospace;
+    font-size: 0.85em;
+
+    + pre {
+      margin-top: 0;
+    }
+  }
+}
