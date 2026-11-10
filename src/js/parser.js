@@ -5,14 +5,15 @@
 // MPE 解析钩子：https://shd101wyy.github.io/markdown-preview-enhanced/#/extend-parser
 const numberHeadings = require("./heading-numbering.js");
 const enhanceTables = require("./table-layout.js");
+const material = require("./material.js");
 
 module.exports = {
   async onWillParseMarkdown(markdown) {
-    return markdown;
+    return material.preprocess(markdown);
   },
 
   async onDidParseMarkdown(html) {
-    const numberedHtml = numberHeadings(html);
+    const numberedHtml = numberHeadings(material.postprocess(html));
     return enhanceTables(numberedHtml);
   },
 };

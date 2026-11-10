@@ -2,3 +2,6 @@
 
 # auto-generated
 /parser.js
+
+# local icon scan roots
+/.material-roots
