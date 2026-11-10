@@ -3,7 +3,7 @@
 默认配置位于 `~/.local/state/crossnote/`
 
 - `style.less` 按顺序加载 `src/css/` 中的 Less 模块
-- `config.js` 配置数学公式与 Mermaid
+- `config.js` 配置段内换行、数学公式与 Mermaid
 - `parser.js` 为 Makefile 自动生成的 mpe 入口
 
 `parser.js` 需要利用 Node.js 和 make 合成，使用前需要在本目录执行：

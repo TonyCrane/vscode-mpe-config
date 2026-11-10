@@ -3,6 +3,9 @@
 // 模板来源：Crossnote 0.9.42
 // 上游模板采用 NCSA；本地新增配置采用 AGPL-3.0-only
 ({
+  // 普通换行连接为一段；两个以上行尾空格或反斜线产生硬换行。
+  breakOnSingleNewLine: false,
+
   katexConfig: {
     macros: {
       "\\plus": "\\operatorname{plus}",

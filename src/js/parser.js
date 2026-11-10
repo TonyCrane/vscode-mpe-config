@@ -5,6 +5,7 @@
 // MPE 解析钩子：https://shd101wyy.github.io/markdown-preview-enhanced/#/extend-parser
 const numberHeadings = require("./heading-numbering.js");
 const enhanceTables = require("./table-layout.js");
+const joinSoftLineBreaks = require("./soft-line-breaks.js");
 
 module.exports = {
   async onWillParseMarkdown(markdown) {
@@ -12,7 +13,8 @@ module.exports = {
   },
 
   async onDidParseMarkdown(html) {
-    const numberedHtml = numberHeadings(html);
+    const joinedHtml = joinSoftLineBreaks(html);
+    const numberedHtml = numberHeadings(joinedHtml);
     return enhanceTables(numberedHtml);
   },
 };
